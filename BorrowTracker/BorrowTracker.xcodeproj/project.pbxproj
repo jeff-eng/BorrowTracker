@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		959D32C11F0C2199002977E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D32C01F0C2199002977E9 /* AppDelegate.swift */; };
 		959D32C61F0C2199002977E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D32C41F0C2199002977E9 /* Main.storyboard */; };
-		959D32C91F0C2199002977E9 /* BorrowTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 959D32C71F0C2199002977E9 /* BorrowTracker.xcdatamodeld */; };
 		959D32CB1F0C2199002977E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959D32CA1F0C2199002977E9 /* Assets.xcassets */; };
 		959D32CE1F0C2199002977E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D32CC1F0C2199002977E9 /* LaunchScreen.storyboard */; };
+		959D32D91F0D9452002977E9 /* BorrowTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 959D32D71F0D9452002977E9 /* BorrowTracker.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		959D32BD1F0C2199002977E9 /* BorrowTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorrowTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959D32C01F0C2199002977E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959D32C51F0C2199002977E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		959D32C81F0C2199002977E9 /* BorrowTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BorrowTracker.xcdatamodel; sourceTree = "<group>"; };
 		959D32CA1F0C2199002977E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959D32CD1F0C2199002977E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959D32CF1F0C2199002977E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959D32D81F0D9452002977E9 /* BorrowTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BorrowTracker.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				959D32CA1F0C2199002977E9 /* Assets.xcassets */,
 				959D32CC1F0C2199002977E9 /* LaunchScreen.storyboard */,
 				959D32CF1F0C2199002977E9 /* Info.plist */,
-				959D32C71F0C2199002977E9 /* BorrowTracker.xcdatamodeld */,
+				959D32D71F0D9452002977E9 /* BorrowTracker.xcdatamodeld */,
 			);
 			path = BorrowTracker;
 			sourceTree = "<group>";
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959D32C91F0C2199002977E9 /* BorrowTracker.xcdatamodeld in Sources */,
 				959D32C11F0C2199002977E9 /* AppDelegate.swift in Sources */,
+				959D32D91F0D9452002977E9 /* BorrowTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +308,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		959D32C71F0C2199002977E9 /* BorrowTracker.xcdatamodeld */ = {
+		959D32D71F0D9452002977E9 /* BorrowTracker.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				959D32C81F0C2199002977E9 /* BorrowTracker.xcdatamodel */,
+				959D32D81F0D9452002977E9 /* BorrowTracker.xcdatamodel */,
 			);
-			currentVersion = 959D32C81F0C2199002977E9 /* BorrowTracker.xcdatamodel */;
+			currentVersion = 959D32D81F0D9452002977E9 /* BorrowTracker.xcdatamodel */;
 			path = BorrowTracker.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
