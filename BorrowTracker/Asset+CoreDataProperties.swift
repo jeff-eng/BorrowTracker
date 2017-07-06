@@ -16,8 +16,8 @@ extension Asset {
         return NSFetchRequest<Asset>(entityName: "Asset")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var checkedOut: Bool
+    @NSManaged public var name: String?
     @NSManaged public var image: NSData?
     @NSManaged public var checkoutDate: NSDate?
     @NSManaged public var details: String?

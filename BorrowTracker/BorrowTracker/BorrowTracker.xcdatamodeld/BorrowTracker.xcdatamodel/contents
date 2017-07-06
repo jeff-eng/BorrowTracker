@@ -13,12 +13,12 @@
         <relationship name="borrower" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="borrowedAssets" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
-        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
         <relationship name="borrowedAssets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Asset" inverseName="borrower" inverseEntity="Asset" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Asset" positionX="-36" positionY="9" width="128" height="193"/>
-        <element name="Person" positionX="-209" positionY="9" width="128" height="88"/>
+        <element name="Asset" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Person" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>
