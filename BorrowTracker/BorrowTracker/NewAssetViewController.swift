@@ -10,6 +10,13 @@ import UIKit
 
 class NewAssetViewController: UIViewController {
  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         
         let alertController = UIAlertController(title: "Abort New Item", message: "Are you sure you want to exit item creation?", preferredStyle: .actionSheet)
@@ -23,4 +30,9 @@ class NewAssetViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
+    func dismissKeyboard(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    
 }
