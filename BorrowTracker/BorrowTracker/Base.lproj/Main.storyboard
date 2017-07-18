@@ -285,7 +285,7 @@
                                                             <constraint firstItem="wXD-4T-ki4" firstAttribute="leading" secondItem="mQR-U1-SQP" secondAttribute="leading" id="ryv-12-ars"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-gY-7Su">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-gY-7Su">
                                                         <rect key="frame" x="0.0" y="643" width="335" height="215.5"/>
                                                         <color key="backgroundColor" red="0.50471413139999999" green="0.82946318389999996" blue="0.97995799780000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -371,6 +371,9 @@
                     <navigationItem key="navigationItem" id="Por-Pz-BEz"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="imageView" destination="Y9k-gY-7Su" id="0Av-VN-x2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
