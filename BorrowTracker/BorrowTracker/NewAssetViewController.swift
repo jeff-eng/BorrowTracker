@@ -44,21 +44,61 @@ class NewAssetViewController: UIViewController {
 extension NewAssetViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     func selectAssetImage(_ sender: UITapGestureRecognizer) {
+        
         // Create instance of UIImagePickerController
         let imagePicker = UIImagePickerController()
         
-        // If the device has a camera, allow user to use camera to take picture and set as the asset's image
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.sourceType = .camera
-        } else {
-            imagePicker.sourceType = .photoLibrary
-        }
+        let imageOptionActionSheet = UIAlertController(title: "Select An Option", message: "Please select either camera or photo library to choose your asset's image", preferredStyle: .actionSheet)
         
-        // We need to set the delegate to the NewAssetViewController so this class can receive messages whether they selected an iamge or cancelled out of it
+        // Create UIAlertActions for selecting either camera or the photo library
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            // Check if the device has a camera
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } else {
+                // Alert user that device has no camera
+                let noCameraAlert = UIAlertController(title: "Error", message: "We were unable to detect a camera on your device. Choose from your photo library.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.presentPhotoLibraryInterface(alert: action, imagePicker: imagePicker)
+                })
+                noCameraAlert.addAction(okAction)
+                self.present(noCameraAlert, animated: true, completion: nil)
+            }
+
+        })
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
+
+            self.presentPhotoLibraryInterface(alert: action, imagePicker: imagePicker)
+        })
+        
+        // Add actions to the alert controller
+        imageOptionActionSheet.addAction(cameraAction)
+        imageOptionActionSheet.addAction(photoLibraryAction)
+        
+        present(imageOptionActionSheet, animated: true, completion: nil)
+        
+        // We need to set the delegate to the NewAssetViewController so this class can receive messages whether they selected an image or cancelled out of it
         imagePicker.delegate = self
         
-        // Present image picker
-        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func presentPhotoLibraryInterface(alert action: UIAlertAction, imagePicker controller: UIImagePickerController) {
+        controller.sourceType = .photoLibrary
+        self.present(controller, animated: true, completion: nil)
+    }
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // Get the image from the info dictionary
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // Display the image
+        imageView.image = image
+        
+        // Dimiss the image picker
+        dismiss(animated: true, completion: nil)
+        
     }
     
 }
