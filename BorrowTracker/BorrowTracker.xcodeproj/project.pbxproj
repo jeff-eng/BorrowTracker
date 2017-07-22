@@ -18,6 +18,7 @@
 		959D32CB1F0C2199002977E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959D32CA1F0C2199002977E9 /* Assets.xcassets */; };
 		959D32CE1F0C2199002977E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959D32CC1F0C2199002977E9 /* LaunchScreen.storyboard */; };
 		95AE2C4B1F22874000AEB378 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE2C4A1F22874000AEB378 /* ImageStore.swift */; };
+		95AE2C4D1F22D38400AEB378 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE2C4C1F22D38400AEB378 /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		959D32CD1F0C2199002977E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959D32CF1F0C2199002977E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95AE2C4A1F22874000AEB378 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		95AE2C4C1F22D38400AEB378 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			children = (
 				95126C9D1F101B5D00AC2A87 /* LendingViewController.swift */,
 				95126CA41F1DB8AF00AC2A87 /* NewAssetViewController.swift */,
+				95AE2C4C1F22D38400AEB378 /* InventoryViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95126C9B1F0EEEB600AC2A87 /* Asset+CoreDataProperties.swift in Sources */,
+				95AE2C4D1F22D38400AEB378 /* InventoryViewController.swift in Sources */,
 				959D32C11F0C2199002977E9 /* AppDelegate.swift in Sources */,
 				95126C971F0EEC1000AC2A87 /* BorrowTracker.xcdatamodeld in Sources */,
 				95AE2C4B1F22874000AEB378 /* ImageStore.swift in Sources */,

@@ -379,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="1039.2" y="976.91154422788611"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Inventory View Controller-->
         <scene sceneID="Wm8-wD-cae">
             <objects>
-                <tableViewController id="bih-eU-XcT" sceneMemberID="viewController">
+                <tableViewController id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

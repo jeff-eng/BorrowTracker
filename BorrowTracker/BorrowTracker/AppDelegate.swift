@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let imageStore = ImageStore()
         
+        let tabBarController = window!.rootViewController as! UITabBarController
+        let inventoryViewController = tabBarController.viewControllers?[1] as! InventoryViewController
+        inventoryViewController.imageStore = imageStore
+        
         return true
     }
 
