@@ -10,14 +10,12 @@ import UIKit
 
 class MasterInventoryViewController: UIViewController {
     
-    let imageStore: ImageStore = {
-        // Get a reference to the AppDelegate
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        // Reference the AppDelegate's ImageStore instance
-        let imageStore = appDelegate.imageStore!
+    var imageStore: ImageStore?
     
-        return imageStore
-    }()
+    override func viewDidLoad() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        imageStore = appDelegate.imageStore
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let inventoryVC = segue.destination as? InventoryViewController {

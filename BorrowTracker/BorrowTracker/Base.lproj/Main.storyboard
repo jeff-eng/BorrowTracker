@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S56-Ai-ucv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S56-Ai-ucv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="92" y="97.601199400299862"/>
         </scene>
-        <!--Master Inventory View Controller-->
+        <!--My Inventory-->
         <scene sceneID="lQ6-CU-u7j">
             <objects>
                 <viewController id="r1s-hn-7kq" customClass="MasterInventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,9 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B40-Up-ZWc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-Up-ZWc">
+                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
                                 <connections>
                                     <segue destination="bih-eU-XcT" kind="embed" identifier="inventoryVC" id="xrd-u1-DHg"/>
                                 </connections>
@@ -121,14 +120,37 @@
                                     <segue destination="a72-kL-xVY" kind="presentation" id="FeX-ES-HUr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-qx-egW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inventory Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raz-82-3y7">
+                                        <rect key="frame" x="8" y="8" width="113" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="89S-RV-9eB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="B40-Up-ZWc" secondAttribute="bottom" id="3xE-bp-Ai1"/>
                             <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="TZI-Bq-XBf" secondAttribute="bottom" constant="30" id="Toj-aM-wHx"/>
+                            <constraint firstItem="B40-Up-ZWc" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="VXz-LX-Byi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TZI-Bq-XBf" secondAttribute="trailing" constant="30" id="WLC-Nt-fLI"/>
+                            <constraint firstItem="dLX-qx-egW" firstAttribute="top" secondItem="ljn-ot-RZf" secondAttribute="bottom" id="c49-wR-Y8G"/>
+                            <constraint firstItem="B40-Up-ZWc" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="dK9-S0-e89"/>
+                            <constraint firstAttribute="trailing" secondItem="B40-Up-ZWc" secondAttribute="trailing" id="lW1-KJ-58D"/>
+                            <constraint firstAttribute="trailing" secondItem="dLX-qx-egW" secondAttribute="trailing" id="zJL-Oc-Snm"/>
+                            <constraint firstItem="dLX-qx-egW" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="zzH-Gr-1sd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="59a-VI-18C"/>
+                    <navigationItem key="navigationItem" title="My Inventory" id="59a-VI-18C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,7 +406,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="inventoryVC" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
