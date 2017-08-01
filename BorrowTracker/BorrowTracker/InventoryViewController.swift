@@ -11,4 +11,11 @@ import UIKit
 class InventoryViewController: UITableViewController {
     
     var imageStore: ImageStore!
+    let inventoryDataSource = InventoryDataSource()
+    
+    override func viewDidLoad() {
+        tableView.dataSource = inventoryDataSource
+        tableView.delegate = self
+    }
+    
 }
