@@ -14,14 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var imageStore: ImageStore!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let imageStore = ImageStore()
+        imageStore = ImageStore()
         
         let tabBarController = window!.rootViewController as! UITabBarController
-        let inventoryViewController = tabBarController.viewControllers?[1] as! InventoryViewController
-        inventoryViewController.imageStore = imageStore
+        print("JEFF: \(tabBarController)")
+        
+        let navController = tabBarController.viewControllers?[1] as! UINavigationController
+        print("JEFF: \(navController)")
+        
+        let viewController = navController.topViewController!
+    
+        print(viewController.view.frame)
         
         return true
     }

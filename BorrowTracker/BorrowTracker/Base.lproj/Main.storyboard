@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="92" y="97.601199400299862"/>
         </scene>
-        <!--View Controller-->
+        <!--Master Inventory View Controller-->
         <scene sceneID="lQ6-CU-u7j">
             <objects>
-                <viewController id="r1s-hn-7kq" sceneMemberID="viewController">
+                <viewController id="r1s-hn-7kq" customClass="MasterInventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljn-ot-RZf"/>
                         <viewControllerLayoutGuide type="bottom" id="zuf-NV-m1h"/>
@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="bih-eU-XcT" kind="embed" id="xrd-u1-DHg"/>
+                                    <segue destination="bih-eU-XcT" kind="embed" identifier="inventoryVC" id="xrd-u1-DHg"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-Bq-XBf">
@@ -382,7 +382,7 @@
         <!--Inventory View Controller-->
         <scene sceneID="Wm8-wD-cae">
             <objects>
-                <tableViewController id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="inventoryVC" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
