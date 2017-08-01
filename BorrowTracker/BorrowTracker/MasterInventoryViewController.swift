@@ -12,14 +12,9 @@ class MasterInventoryViewController: UIViewController {
     
     var imageStore: ImageStore?
     
-    override func viewDidLoad() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        imageStore = appDelegate.imageStore
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let inventoryVC = segue.destination as? InventoryViewController {
-            inventoryVC.imageStore = self.imageStore
+            inventoryVC.imageStore = imageStore
         }
         
     }
