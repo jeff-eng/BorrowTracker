@@ -18,8 +18,8 @@ class InventoryDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as UITableViewCell
+
         return cell
         
     }
