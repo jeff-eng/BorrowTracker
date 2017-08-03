@@ -16,6 +16,7 @@ class InventoryViewController: UITableViewController {
     override func viewDidLoad() {
         tableView.dataSource = inventoryDataSource
         tableView.delegate = self
+        
     }
     
 }

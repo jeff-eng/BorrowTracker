@@ -156,7 +156,7 @@
                             <constraint firstItem="B40-Up-ZWc" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="VXz-LX-Byi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TZI-Bq-XBf" secondAttribute="trailing" constant="30" id="WLC-Nt-fLI"/>
                             <constraint firstItem="dLX-qx-egW" firstAttribute="top" secondItem="ljn-ot-RZf" secondAttribute="bottom" id="c49-wR-Y8G"/>
-                            <constraint firstItem="B40-Up-ZWc" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="dK9-S0-e89"/>
+                            <constraint firstItem="B40-Up-ZWc" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="g7Z-nA-zjr"/>
                             <constraint firstAttribute="trailing" secondItem="B40-Up-ZWc" secondAttribute="trailing" id="lW1-KJ-58D"/>
                             <constraint firstAttribute="trailing" secondItem="dLX-qx-egW" secondAttribute="trailing" id="zJL-Oc-Snm"/>
                             <constraint firstItem="dLX-qx-egW" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="zzH-Gr-1sd"/>
@@ -416,7 +416,7 @@
         <!--Inventory View Controller-->
         <scene sceneID="Wm8-wD-cae">
             <objects>
-                <tableViewController storyboardIdentifier="inventoryVC" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="inventoryVC" automaticallyAdjustsScrollViewInsets="NO" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

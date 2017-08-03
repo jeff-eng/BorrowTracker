@@ -19,4 +19,9 @@ class MasterInventoryViewController: UIViewController {
         
     }
     
+    override func viewDidLoad() {
+        // Turn off automatic scroll view inset adjustment to stop default behavior of creating an inset so that navigation and status bar don't obstruct the first row of table view
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
 }
