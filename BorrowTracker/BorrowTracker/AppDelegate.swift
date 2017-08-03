@@ -13,11 +13,16 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        let tabBarController = window!.rootViewController as! UITabBarController
         
-        let imageStore = ImageStore()
+        let navController = tabBarController.viewControllers?[1] as! UINavigationController
+        
+        let inventoryViewController = navController.topViewController as! MasterInventoryViewController
+        
+        inventoryViewController.imageStore = ImageStore()
         
         return true
     }

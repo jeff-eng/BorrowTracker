@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S56-Ai-ucv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S56-Ai-ucv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="92" y="97.601199400299862"/>
         </scene>
-        <!--View Controller-->
+        <!--My Inventory-->
         <scene sceneID="lQ6-CU-u7j">
             <objects>
-                <viewController id="r1s-hn-7kq" sceneMemberID="viewController">
+                <viewController id="r1s-hn-7kq" customClass="MasterInventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljn-ot-RZf"/>
                         <viewControllerLayoutGuide type="bottom" id="zuf-NV-m1h"/>
@@ -108,11 +108,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B40-Up-ZWc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-Up-ZWc">
+                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
                                 <connections>
-                                    <segue destination="bih-eU-XcT" kind="embed" id="xrd-u1-DHg"/>
+                                    <segue destination="bih-eU-XcT" kind="embed" identifier="inventoryVC" id="xrd-u1-DHg"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-Bq-XBf">
@@ -121,14 +120,49 @@
                                     <segue destination="a72-kL-xVY" kind="presentation" id="FeX-ES-HUr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-qx-egW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7PZ-ZB-ctd">
+                                        <rect key="frame" x="8" y="8" width="175" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raz-82-3y7">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oO-wg-KCU">
+                                                <rect key="frame" x="133" y="0.0" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="89S-RV-9eB"/>
+                                    <constraint firstItem="7PZ-ZB-ctd" firstAttribute="leading" secondItem="dLX-qx-egW" secondAttribute="leading" constant="8" id="Kym-4g-MDt"/>
+                                    <constraint firstItem="7PZ-ZB-ctd" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="top" constant="8" id="oB9-ju-MOq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="B40-Up-ZWc" secondAttribute="bottom" id="3xE-bp-Ai1"/>
                             <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="TZI-Bq-XBf" secondAttribute="bottom" constant="30" id="Toj-aM-wHx"/>
+                            <constraint firstItem="B40-Up-ZWc" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="VXz-LX-Byi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TZI-Bq-XBf" secondAttribute="trailing" constant="30" id="WLC-Nt-fLI"/>
+                            <constraint firstItem="dLX-qx-egW" firstAttribute="top" secondItem="ljn-ot-RZf" secondAttribute="bottom" id="c49-wR-Y8G"/>
+                            <constraint firstItem="B40-Up-ZWc" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="g7Z-nA-zjr"/>
+                            <constraint firstAttribute="trailing" secondItem="B40-Up-ZWc" secondAttribute="trailing" id="lW1-KJ-58D"/>
+                            <constraint firstAttribute="trailing" secondItem="dLX-qx-egW" secondAttribute="trailing" id="zJL-Oc-Snm"/>
+                            <constraint firstItem="dLX-qx-egW" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="zzH-Gr-1sd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="59a-VI-18C"/>
+                    <navigationItem key="navigationItem" title="My Inventory" id="59a-VI-18C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -379,16 +413,16 @@
             </objects>
             <point key="canvasLocation" x="1039.2" y="976.91154422788611"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Inventory View Controller-->
         <scene sceneID="Wm8-wD-cae">
             <objects>
-                <tableViewController id="bih-eU-XcT" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="inventoryVC" automaticallyAdjustsScrollViewInsets="NO" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IFa-bO-Ros">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InventoryCell" id="IFa-bO-Ros">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFa-bO-Ros" id="3pD-1o-b1b">
