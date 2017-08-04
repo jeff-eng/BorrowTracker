@@ -32,7 +32,6 @@
         <!--Lending View Controller-->
         <scene sceneID="TRf-YZ-JL0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IYz-T7-Djs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="WCe-k7-TU6" customClass="LendingViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="r5q-SJ-Ncm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -55,13 +54,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Kbm-CT-HOp"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYz-T7-Djs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032.8" y="-604.04797601199402"/>
         </scene>
         <!--My Lending-->
         <scene sceneID="ZsE-vO-CjK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1C9-se-OlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LEf-ex-LoC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Lending" id="9Cz-uy-GV8"/>
                     <toolbarItems/>
@@ -74,13 +73,13 @@
                         <segue destination="WCe-k7-TU6" kind="relationship" relationship="rootViewController" id="DWF-f3-soW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1C9-se-OlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-604.04797601199402"/>
         </scene>
         <!--My Stuff-->
         <scene sceneID="5di-Xf-JlO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qmq-XV-QKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n3s-qC-dKn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Stuff" id="wo3-rT-CJz"/>
                     <toolbarItems/>
@@ -93,13 +92,13 @@
                         <segue destination="r1s-hn-7kq" kind="relationship" relationship="rootViewController" id="Bb9-Ud-rN7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmq-XV-QKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92" y="97.601199400299862"/>
         </scene>
         <!--My Inventory-->
         <scene sceneID="lQ6-CU-u7j">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="r1s-hn-7kq" customClass="MasterInventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljn-ot-RZf"/>
@@ -165,13 +164,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Inventory" id="59a-VI-18C"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="98.50074962518741"/>
         </scene>
         <!--New Asset View Controller-->
         <scene sceneID="AEx-Ma-nAR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="a72-kL-xVY" customClass="NewAssetViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nk8-ZC-gAF"/>
@@ -410,13 +409,13 @@
                         <outlet property="imageView" destination="Y9k-gY-7Su" id="0Av-VN-x2B"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="976.91154422788611"/>
         </scene>
         <!--Inventory View Controller-->
         <scene sceneID="Wm8-wD-cae">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucv-lI-8j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="inventoryVC" automaticallyAdjustsScrollViewInsets="NO" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
@@ -430,9 +429,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Rga-4U-tkP" kind="show" identifier="InventoryDetailVC" id="yjA-JI-T7J"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -441,26 +437,27 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucv-lI-8j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802" y="95"/>
         </scene>
-        <!--Inventory Detail View Controller-->
-        <scene sceneID="SLm-gV-vAu">
+        <!--View Controller-->
+        <scene sceneID="BYh-Kh-Y1r">
             <objects>
-                <viewController id="Rga-4U-tkP" customClass="InventoryDetailViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MSs-Iy-RRr" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Sk3-ui-Dum"/>
-                        <viewControllerLayoutGuide type="bottom" id="qDs-9z-pg7"/>
+                        <viewControllerLayoutGuide type="top" id="rpg-TU-UO9"/>
+                        <viewControllerLayoutGuide type="bottom" id="FcJ-bD-9WW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rcr-MV-sCD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
+                    <view key="view" contentMode="scaleToFill" id="fQQ-u5-SWa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z68-Do-WNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2F-ks-izo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="94"/>
+            <point key="canvasLocation" x="2649" y="185"/>
         </scene>
     </scenes>
 </document>

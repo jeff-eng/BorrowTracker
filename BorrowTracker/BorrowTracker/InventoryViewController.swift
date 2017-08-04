@@ -19,4 +19,21 @@ class InventoryViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "InventoryDetailVC"?:
+            if let row = tableView.indexPathForSelectedRow?.row, row != inventoryDataSource.assets.count {
+                // Get the item at the index path that corresponds with the row
+                let asset = inventoryDataSource.assets[row]
+                let inventoryDetailViewController = segue.destination as! InventoryDetailViewController
+                inventoryDetailViewController.asset = asset
+            }
+            
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
+
+    
 }
