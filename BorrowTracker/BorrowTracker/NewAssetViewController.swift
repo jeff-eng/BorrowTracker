@@ -35,7 +35,7 @@ class NewAssetViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    func dismissKeyboard(sender: UITapGestureRecognizer) {
+    @objc fileprivate func dismissKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     
@@ -43,7 +43,7 @@ class NewAssetViewController: UIViewController {
 
 extension NewAssetViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    func selectAssetImage(_ sender: UITapGestureRecognizer) {
+    @objc fileprivate func selectAssetImage(_ sender: UITapGestureRecognizer) {
         
         // Create instance of UIImagePickerController
         let imagePicker = UIImagePickerController()
