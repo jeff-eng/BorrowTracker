@@ -12,4 +12,5 @@ class InventoryDetailViewController: UIViewController {
     
     var asset: Asset!
     
+    
 }

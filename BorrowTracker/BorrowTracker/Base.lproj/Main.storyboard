@@ -32,7 +32,6 @@
         <!--Lending View Controller-->
         <scene sceneID="TRf-YZ-JL0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IYz-T7-Djs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="WCe-k7-TU6" customClass="LendingViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="r5q-SJ-Ncm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -55,13 +54,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Kbm-CT-HOp"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYz-T7-Djs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032.8" y="-604.04797601199402"/>
         </scene>
         <!--My Lending-->
         <scene sceneID="ZsE-vO-CjK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1C9-se-OlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LEf-ex-LoC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Lending" id="9Cz-uy-GV8"/>
                     <toolbarItems/>
@@ -74,13 +73,13 @@
                         <segue destination="WCe-k7-TU6" kind="relationship" relationship="rootViewController" id="DWF-f3-soW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1C9-se-OlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-604.04797601199402"/>
         </scene>
         <!--My Stuff-->
         <scene sceneID="5di-Xf-JlO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qmq-XV-QKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n3s-qC-dKn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Stuff" id="wo3-rT-CJz"/>
                     <toolbarItems/>
@@ -93,13 +92,13 @@
                         <segue destination="r1s-hn-7kq" kind="relationship" relationship="rootViewController" id="Bb9-Ud-rN7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmq-XV-QKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92" y="97.601199400299862"/>
         </scene>
         <!--My Inventory-->
         <scene sceneID="lQ6-CU-u7j">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="r1s-hn-7kq" customClass="MasterInventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljn-ot-RZf"/>
@@ -109,18 +108,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-Up-ZWc">
-                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
-                                <connections>
-                                    <segue destination="bih-eU-XcT" kind="embed" identifier="inventoryVC" id="xrd-u1-DHg"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-Bq-XBf">
-                                <rect key="frame" x="307" y="566" width="22" height="22"/>
-                                <connections>
-                                    <segue destination="a72-kL-xVY" kind="presentation" id="FeX-ES-HUr"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-qx-egW">
                                 <rect key="frame" x="0.0" y="64" width="375" height="80"/>
                                 <subviews>
@@ -149,29 +136,52 @@
                                     <constraint firstItem="7PZ-ZB-ctd" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="top" constant="8" id="oB9-ju-MOq"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-hb-cSP">
+                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InventoryCell" id="78g-sm-HA2">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78g-sm-HA2" id="7b7-Wh-bFu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-Bq-XBf">
+                                <rect key="frame" x="307" y="566" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="a72-kL-xVY" kind="presentation" id="FeX-ES-HUr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="B40-Up-ZWc" secondAttribute="bottom" id="3xE-bp-Ai1"/>
+                            <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="dfJ-hb-cSP" secondAttribute="bottom" id="FhS-hq-ZDM"/>
                             <constraint firstItem="zuf-NV-m1h" firstAttribute="top" secondItem="TZI-Bq-XBf" secondAttribute="bottom" constant="30" id="Toj-aM-wHx"/>
-                            <constraint firstItem="B40-Up-ZWc" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="VXz-LX-Byi"/>
+                            <constraint firstAttribute="trailing" secondItem="dfJ-hb-cSP" secondAttribute="trailing" id="VX1-w1-fuy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TZI-Bq-XBf" secondAttribute="trailing" constant="30" id="WLC-Nt-fLI"/>
+                            <constraint firstItem="dfJ-hb-cSP" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="adb-Hz-0sj"/>
                             <constraint firstItem="dLX-qx-egW" firstAttribute="top" secondItem="ljn-ot-RZf" secondAttribute="bottom" id="c49-wR-Y8G"/>
-                            <constraint firstItem="B40-Up-ZWc" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="g7Z-nA-zjr"/>
-                            <constraint firstAttribute="trailing" secondItem="B40-Up-ZWc" secondAttribute="trailing" id="lW1-KJ-58D"/>
+                            <constraint firstItem="dfJ-hb-cSP" firstAttribute="top" secondItem="dLX-qx-egW" secondAttribute="bottom" id="t4t-GZ-7Yo"/>
                             <constraint firstAttribute="trailing" secondItem="dLX-qx-egW" secondAttribute="trailing" id="zJL-Oc-Snm"/>
                             <constraint firstItem="dLX-qx-egW" firstAttribute="leading" secondItem="nN4-WU-Ydh" secondAttribute="leading" id="zzH-Gr-1sd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Inventory" id="59a-VI-18C"/>
+                    <connections>
+                        <outlet property="tableView" destination="dfJ-hb-cSP" id="9jN-AO-7ug"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-Df-CXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="98.50074962518741"/>
         </scene>
         <!--New Asset View Controller-->
         <scene sceneID="AEx-Ma-nAR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="a72-kL-xVY" customClass="NewAssetViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nk8-ZC-gAF"/>
@@ -410,57 +420,9 @@
                         <outlet property="imageView" destination="Y9k-gY-7Su" id="0Av-VN-x2B"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="976.91154422788611"/>
-        </scene>
-        <!--Inventory View Controller-->
-        <scene sceneID="Wm8-wD-cae">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucv-lI-8j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController storyboardIdentifier="inventoryVC" automaticallyAdjustsScrollViewInsets="NO" id="bih-eU-XcT" customClass="InventoryViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zj-Cl-2sU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InventoryCell" id="IFa-bO-Ros">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFa-bO-Ros" id="3pD-1o-b1b">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Rga-4U-tkP" kind="show" identifier="InventoryDetailVC" id="yjA-JI-T7J"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bih-eU-XcT" id="chj-Vb-HRR"/>
-                            <outlet property="delegate" destination="bih-eU-XcT" id="ahf-Go-D7V"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="1802" y="95"/>
-        </scene>
-        <!--Inventory Detail View Controller-->
-        <scene sceneID="SLm-gV-vAu">
-            <objects>
-                <viewController id="Rga-4U-tkP" customClass="InventoryDetailViewController" customModule="BorrowTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Sk3-ui-Dum"/>
-                        <viewControllerLayoutGuide type="bottom" id="qDs-9z-pg7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rcr-MV-sCD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z68-Do-WNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2599" y="94"/>
         </scene>
     </scenes>
 </document>

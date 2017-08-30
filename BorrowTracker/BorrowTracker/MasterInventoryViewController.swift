@@ -10,18 +10,28 @@ import UIKit
 
 class MasterInventoryViewController: UIViewController {
     
-    var imageStore: ImageStore?
+    @IBOutlet var tableView: UITableView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let inventoryVC = segue.destination as? InventoryViewController {
-            inventoryVC.imageStore = imageStore
-        }
+    var imageStore: ImageStore?
+    let inventoryDataSource = InventoryDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = inventoryDataSource
+        
+        // Turn off automatic scroll view inset adjustment to stop default behavior of creating an inset so that navigation and status bar don't obstruct the first row of table view
+        self.automaticallyAdjustsScrollViewInsets = false
         
     }
     
-    override func viewDidLoad() {
-        // Turn off automatic scroll view inset adjustment to stop default behavior of creating an inset so that navigation and status bar don't obstruct the first row of table view
-        self.automaticallyAdjustsScrollViewInsets = false
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
+}
+
+extension MasterInventoryViewController: UITableViewDelegate {
+    // all methods in UITableViewDelegate protocol are optional
 }

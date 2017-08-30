@@ -16,7 +16,6 @@ class LendingViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.dataSource = assetDataSource
-        tableView.delegate = self
     }
 }
 
