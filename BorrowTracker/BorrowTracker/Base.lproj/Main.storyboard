@@ -236,7 +236,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-Oz-C1Q">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-Oz-C1Q">
                                                 <rect key="frame" x="0.0" y="62" width="350" height="116"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -373,7 +373,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="e5C-sK-00V">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="z4D-iy-zcz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="z4D-iy-zcz">
+                            <connections>
+                                <action selector="toggleEditingMode:" destination="opd-ux-vL9" id="6Sn-OT-wfN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -633,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivz-df-bHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.2" y="976.91154422788611"/>
+            <point key="canvasLocation" x="1039" y="1078"/>
         </scene>
     </scenes>
 </document>

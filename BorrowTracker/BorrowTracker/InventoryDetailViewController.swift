@@ -21,7 +21,7 @@ class InventoryDetailViewController: UIViewController {
     
     // MARK: Class properties
     var asset: Asset!
-    
+    fileprivate var editingEnabled = false
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -31,9 +31,30 @@ class InventoryDetailViewController: UIViewController {
         
     }
     
-    func saveChanges() {
+    @IBAction func toggleEditingMode(_ sender: UIBarButtonItem) {
+        if editingEnabled {
+            editingEnabled = false
+            // disable editing of subviews
+        } else {
+            editingEnabled = true
+            // enable editing of subviews
+        }
+        
+    }
+    
+    private func saveChanges() {
         // Update the model object (asset)
     }
     
 }
 
+extension InventoryDetailViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if editingEnabled {
+            return true
+        } else { return false }
+        
+    }
+    
+}

@@ -32,7 +32,7 @@ class InventoryDataSource: NSObject, UITableViewDataSource {
             // cell.infoShownByThisCell = data.theDataTheCellNeedsToDisplayItsCustomLabelsEtc
         }
         
-        return cell
+        return dequeuedCell
         
     }
 }
