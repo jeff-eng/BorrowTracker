@@ -18,10 +18,12 @@ class InventoryDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let asset = assets[indexPath.row]
+//        let asset = assets[indexPath.row]
         
         // Get a dequeued cell from the table view for re-use
         let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
+        
+        dequeuedCell.backgroundColor = .red
         
         // TODO: Specify a custom table view cell class
         // If I can cast the dequeued cell as UITableViewCell, save it to constant named 'cell'
@@ -30,7 +32,7 @@ class InventoryDataSource: NSObject, UITableViewDataSource {
             // cell.infoShownByThisCell = data.theDataTheCellNeedsToDisplayItsCustomLabelsEtc
         }
         
-        return UITableViewCell()
+        return cell
         
     }
 }
